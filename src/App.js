@@ -1,23 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {
-    Route,
-    Switch
-} from 'react-router-dom';
-import {fakeInterests, fakeSkills} from "./dummy-data";
+import React from "react"
+import "./App.css"
+import { Route } from "react-router-dom/cjs/react-router-dom.min"
+import { Switch } from "react-router-dom"
+import { fakeInterests, fakeSkills } from "./dummy-data"
+import { Nav } from "./components/Nav.js"
+import { Login } from "./components/Login"
+import { Interests } from "./components/Interests"
 
 function App() {
-    console.log('test return', fakeInterests);
-    console.log('test return', fakeSkills);
+  console.log("test return", fakeInterests)
+  console.log("test return", fakeSkills)
   return (
     <div className="App">
-      <p>This is App.js</p>
-        <Switch>
-
-        </Switch>
+      <Route exact path="/" render={() => <Login />} />
+      <Switch>
+      {/* nav should not show on login page */}
+        {/* <Nav></Nav>  */}
+        <Route
+          exact
+          path="/interests"
+          render={() => <Interests interests={fakeInterests} />}
+        />
+      </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
