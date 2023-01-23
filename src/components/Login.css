@@ -1,13 +1,11 @@
 .login-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  margin-top: 230px;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 20%;
   height: 380px;
   width: 800px;
-  background-color: #343d44;
-  color: white;
+  background-color: rgba(66, 80, 91, 1);
   border: 10px solid rgba(255, 255, 255, 1);
   box-shadow: 0px 0px 10px rgb(0 0 0 / 35%);
   box-sizing: border-box;
@@ -16,31 +14,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2em;
   color: rgba(237, 134, 67, 1);
-  padding: 15px;
   background-color: rgba(93, 111, 125, 1);
-  width: 45%;
-  height: 91%;
+  width: 50%;
 }
 .noinc-logo {
-  width: 60%;
+  width: 55%;
 }
-.login {
+.login-form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid pink;
+  width: 55%;
 }
 .login-text {
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 .login-form {
   display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+input {
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 7px;
+}
+.login {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .login-button {
   background-color: rgba(237, 134, 67, 1);
+  color: white;
+  width: 314px;
+  height: 44px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 900;
+  border-width: 0px;
+}
+.login-button:hover {
+  cursor: pointer;
+  background-color: rgba(93, 111, 125, 1);
 }

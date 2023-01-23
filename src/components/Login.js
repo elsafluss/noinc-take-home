@@ -1,6 +1,7 @@
 import React from "react"
 import "./Login.css"
 import noincLogo from '../images/noinc-logo.svg'
+// TODO: CHANGE THE LOGIN FORM TO A STANDALONE COMPONENT
 
 export const Login = () => {
   return (
@@ -8,7 +9,7 @@ export const Login = () => {
       <div className="logo-container">
         <img src={noincLogo} alt="noinc logo" className="noinc-logo"></img>
       </div>
-      <div className="login">
+      <div className="login-form-container">
         <p className="login-text">Login to Our Magic Portal</p>
         <form className="login-form">
           <input placeholder="Username"></input>
