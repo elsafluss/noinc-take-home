@@ -1,6 +1,8 @@
 import moment from "moment";
 
 const Age = 30;
+const Name = 'Jimbob Hank'
+const Password = 'iAmC00l'
 export const fakeInterests = [
     {
         id: 1,
