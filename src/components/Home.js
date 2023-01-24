@@ -25,6 +25,7 @@ export const Home = () => {
       <div className="home-content">
         <Card></Card>
         <Card></Card>
+        <Card></Card>
       </div>
       {/* {fakeInterests.find(id => id === 1)} */}
     </>

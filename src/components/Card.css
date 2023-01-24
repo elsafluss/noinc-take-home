@@ -1,0 +1,43 @@
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  margin: 100px 20px;
+  width: 355px;
+  height: 220px;
+  background-color: rgba(244, 249, 253, 1);
+  border: 10px solid #fff;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 35%);
+}
+.card-title {
+  width: 100%;
+  margin-left: 50px;
+  text-align: left;
+  color: #ec8643;
+}
+.card-details {
+  display: grid;
+  grid-template: 50px / auto auto;
+}
+.card-details > div {
+}
+.card-name-key,
+.card-type-key {
+  width: 100%;
+  margin-right: 15px;
+}
+.card-name-key,
+.card-name-value {
+  margin-bottom: 15px;
+}
+.card-type-value {
+  background-color: purple;
+  color: #fff;
+}
+.card-name-value,
+.card-type-value {
+  font-weight: 400;
+}

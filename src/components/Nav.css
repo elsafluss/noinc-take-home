@@ -27,12 +27,13 @@
 .navbar-list-container {
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-end;
 }
 .navbar-list {
   flex-direction: column;
 }
 .navbar-button {
-  margin: 0px 60px;
+  margin: 0px 50px;
 }
 .username {
   font-weight: bolder;

@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(237, 134, 67, 1);
+  color: #EC8643;
   background-color: rgba(93, 111, 125, 1);
   width: 50%;
 }
@@ -54,7 +54,7 @@ input {
   flex-direction: column;
 }
 .login-button {
-  background-color: rgba(237, 134, 67, 1);
+  background-color: #EC8643;
   color: white;
   width: 314px;
   height: 44px;
