@@ -7,9 +7,8 @@ import { Card } from "./Card"
 export const Home = ({ userData }) => {
   const username = userData.userData.userData.userName
   const interests = userData.userData.userData.interests
-  if (username && interests) {
-    console.log(interests)
-    console.log(username)
+  const skills = userData.userData.userData.skills
+  if (username && interests && skills) {
     return (
       <>
         <Nav></Nav>
@@ -29,6 +28,7 @@ export const Home = ({ userData }) => {
         </div>
         <div className="home-content">
           <Card interests={interests}></Card>
+          <Card skills={skills}></Card>
         </div>
       </>
     )

@@ -1,10 +1,10 @@
 import React from "react"
 import "./Card.css"
 
-export const Card = ({ interests }) => {
-  if (!interests) {
-    return <h1> you are not interesting, please get a hobby </h1>
-  } else {
+export const Card = ({ interests, skills }) => {
+  if (!interests && !skills) {
+    return <h1> you are not interesting or skilled, please get a hobby </h1>
+  } else if (interests) {
     const interestCard = interests.map((interest, i) => {
       return (
         <div className="card-container" key={i}>
@@ -21,5 +21,22 @@ export const Card = ({ interests }) => {
       )
     })
     return <div>{interestCard}</div>
+  } else if (skills) {
+    const skillsCard = skills.map((skill, i) => {
+      return (
+        <div className="card-container" key={i}>
+          <div className="card-title">
+            <p>Skill</p>
+          </div>
+          <div className="card-details">
+            <div className="card-name-key">NAME:</div>
+            <div className="card-name-value">{skill.name}</div>
+            <div className="card-type-key">TYPE:</div>
+            <div className="card-type-value">{skill.type}</div>
+          </div>
+        </div>
+      )
+    })
+    return <div>{skillsCard}</div>
   }
 }
