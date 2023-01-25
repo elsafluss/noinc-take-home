@@ -1,24 +1,36 @@
 import React from "react"
-import "./App.css"
+import { connect } from "react-redux"
 import { Route } from "react-router-dom/cjs/react-router-dom.min"
 import { Switch } from "react-router-dom"
-import { fakeInterests, fakeSkills } from "./dummy-data"
+import "./App.css"
 import { Login } from "./components/Login"
 import { Nav } from "./components/Nav"
 import { Home } from "./components/Home"
+import { getData } from "./apiCalls"
+import { setUser, showInterests, showSkills } from "./actions"
+// import { Details } from "./components/Details"
 
-function App() {
-  console.log("test return", fakeInterests)
-  console.log("test return", fakeSkills)
+export const App = () => {
+  // TODO: get the userId from the store for the logged in person
+  // then get the user data from the store and pass that through the Home component
+  const userData = getData(1)
+  setUser(userData)
+
   return (
     <div className="App">
       <Switch>
         <Route exact path="/" render={() => <Login />} />
-        <Route path="/home" render={() => <Home interests={fakeInterests} />} />
+        <Route path="/home" render={() => <Home userData={userData} />} />
+        {/* <Route path="/details" render={() => <Details id={id}/>} /> */}
         <Route path="/*" component={Nav} />
       </Switch>
     </div>
   )
 }
 
-export default App
+const mapStateToProps = (state) => ({
+  interests: state.interests,
+  skills: state.skills,
+})
+
+export default connect(mapStateToProps, { showInterests, showSkills })(App)

@@ -22,8 +22,6 @@
   display: grid;
   grid-template: 50px / auto auto;
 }
-.card-details > div {
-}
 .card-name-key,
 .card-type-key {
   width: 100%;

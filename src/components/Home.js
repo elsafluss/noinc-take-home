@@ -1,17 +1,19 @@
 import React from "react"
-import { fakeInterests } from "../dummy-data"
-import { Nav } from "./Nav.js"
+import PropTypes from "prop-types"
+import { connect } from "react-redux"
+import { showInterests } from "../actions"
 import "./Home.css"
+import { Nav } from "./Nav.js"
 import { Card } from "./Card"
 
-export const Home = () => {
-  console.log("elsa home page", fakeInterests)
+export const Home = (userData) => {
+//   console.log("elsa user data home", userData)
   return (
     <>
       <Nav></Nav>
       <div className="home-container">
         <div className="home-header-title">
-          <p>Welcome Username</p>
+          <p>Welcome {userData.userName}</p>
         </div>
         <div className="home-header-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
@@ -31,3 +33,9 @@ export const Home = () => {
     </>
   )
 }
+
+Home.propTypes = {
+  userData: PropTypes.object,
+}
+const mapStateToProps = (state) => ({})
+export default connect(mapStateToProps, { showInterests })(Home)
