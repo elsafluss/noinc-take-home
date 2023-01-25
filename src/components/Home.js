@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { showInterests } from "../actions"
+// import { showInterests } from "../actions"
 import "./Home.css"
 import { Nav } from "./Nav.js"
 import { Card } from "./Card"
@@ -35,7 +35,7 @@ export const Home = (userData) => {
 }
 
 Home.propTypes = {
-  userData: PropTypes.object,
+  userData: PropTypes.string,
 }
-const mapStateToProps = (state) => ({})
-export default connect(mapStateToProps, { showInterests })(Home)
+// const mapStateToProps = (state) => ({})
+// export default connect(mapStateToProps, { showInterests })(Home)

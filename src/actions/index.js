@@ -1,7 +1,7 @@
 export const setUserId = (userId) => {
     return {
         type: "user/setUserId",
-        userData
+        userId
     }
 }
 

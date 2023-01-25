@@ -15,7 +15,7 @@ export const getData = (userId) => {
     if (!response.ok) {
       throw new Error(`${response.status}`)
     } else {
-      return userData
+      return userData.find(user => userId === user.userId)
     }
   })
 }

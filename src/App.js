@@ -6,21 +6,20 @@ import "./App.css"
 import { Login } from "./components/Login"
 import { Nav } from "./components/Nav"
 import { Home } from "./components/Home"
-import { getData } from "./apiCalls"
 import { setUser, showInterests, showSkills } from "./actions"
 // import { Details } from "./components/Details"
 
 export const App = () => {
   // TODO: get the userId from the store for the logged in person
   // then get the user data from the store and pass that through the Home component
-  const userData = getData(1)
-  setUser(userData)
+  // const userData = getData(1)
+  // setUser(userData)
 
   return (
     <div className="App">
       <Switch>
         <Route exact path="/" render={() => <Login />} />
-        <Route path="/home" render={() => <Home userData={userData} />} />
+        <Route path="/home" render={() => <Home userData={'userData'} />} />
         {/* <Route path="/details" render={() => <Details id={id}/>} /> */}
         <Route path="/*" component={Nav} />
       </Switch>
@@ -28,9 +27,9 @@ export const App = () => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  interests: state.interests,
-  skills: state.skills,
-})
+// const mapStateToProps = (state) => ({
+//   interests: state.interests,
+//   skills: state.skills,
+// })
 
-export default connect(mapStateToProps, { showInterests, showSkills })(App)
+// export default connect(mapStateToProps, { showInterests, showSkills })(App)
