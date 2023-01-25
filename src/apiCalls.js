@@ -1,6 +1,5 @@
-import { setUserData } from "./actions"
-import { loginInfo } from "./authentication"
-import { userData } from "./dummy-data"
+import { loginInfo } from "./mockData/authentication"
+import { userData } from "./mockData/dummy-data"
 
 // TODO: get currentUser from store, return that user's data file
 export const getData = (userId) => {
@@ -16,10 +15,7 @@ export const getData = (userId) => {
     if (!response.ok) {
       throw new Error(`${response.status}`)
     } else {
-      const currentUserData = userData.find((user) => userId === user.userId)
-      //save what's returned here into redux
-      setUserData(currentUserData)
-      // return userData.find(user => userId === user.userId)
+      return userData.find((user) => userId === user.userId)
     }
   })
 }

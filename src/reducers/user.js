@@ -4,8 +4,8 @@ const initialUserState = {
 
 const user = (state = initialUserState, action) => {
   switch (action.type) {
-    case "user/setUserData":
-      return { ...state, userData: action.payload }
+    case "setUserData":
+      return { ...state, userData: action.userData }
     default:
       return state
   }

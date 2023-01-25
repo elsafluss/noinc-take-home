@@ -7,7 +7,6 @@ import { Nav } from "./Nav.js"
 import { Card } from "./Card"
 
 export const Home = (userData) => {
-//   console.log("elsa user data home", userData)
   return (
     <>
       <Nav></Nav>

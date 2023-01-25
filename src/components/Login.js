@@ -3,12 +3,15 @@ import { Link } from "react-router-dom"
 import "./Login.css"
 import noincLogo from "../images/noinc-logo.svg"
 import { getData } from "../apiCalls"
-import { loginInfo } from "../authentication"
+import { loginInfo } from "../mockData/authentication"
+import { setUserData } from "../actions"
+import { useDispatch } from "react-redux"
 
 // TODO: CHANGE THE LOGIN FORM TO A STANDALONE COMPONENT
 export const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const dispatch = useDispatch()
   // const [logins, setLogins] = useState("")
 
   // when the page mounts, get the list of username/passwords
@@ -22,7 +25,10 @@ export const Login = () => {
         email === userLoginData.email &&
         password === userLoginData.password
       ) {
-        getData(userLoginData.userId)
+        getData(userLoginData.userId).then((response) => {
+          setUserData(response)
+          dispatch(setUserData(response))
+        })
       }
     })
   }

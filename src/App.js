@@ -6,6 +6,7 @@ import "./App.css"
 import { Login } from "./components/Login"
 import { Nav } from "./components/Nav"
 import { Home } from "./components/Home"
+
 // import { setUser, showInterests, showSkills } from "./actions"
 // import { Details } from "./components/Details"
 
