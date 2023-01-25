@@ -1,12 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { connect } from "react-redux"
-// import { showInterests } from "../actions"
 import "./Home.css"
 import { Nav } from "./Nav.js"
 import { Card } from "./Card"
 
 export const Home = (userData) => {
+  console.log(userData)
   return (
     <>
       <Nav></Nav>
@@ -28,13 +27,10 @@ export const Home = (userData) => {
         <Card></Card>
         <Card></Card>
       </div>
-      {/* {fakeInterests.find(id => id === 1)} */}
     </>
   )
 }
 
 Home.propTypes = {
-  userData: PropTypes.string,
+  userData: PropTypes.object,
 }
-// const mapStateToProps = (state) => ({})
-// export default connect(mapStateToProps, { showInterests })(Home)
