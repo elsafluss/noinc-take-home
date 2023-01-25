@@ -1,12 +1,12 @@
 import React from "react"
-import { connect } from "react-redux"
+// import { connect } from "react-redux"
 import { Route } from "react-router-dom/cjs/react-router-dom.min"
 import { Switch } from "react-router-dom"
 import "./App.css"
 import { Login } from "./components/Login"
 import { Nav } from "./components/Nav"
 import { Home } from "./components/Home"
-import { setUser, showInterests, showSkills } from "./actions"
+// import { setUser, showInterests, showSkills } from "./actions"
 // import { Details } from "./components/Details"
 
 export const App = () => {

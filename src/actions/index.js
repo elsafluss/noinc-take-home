@@ -1,7 +1,8 @@
-export const setUserId = (userId) => {
+export const setUserData = (userData) => {
+    console.log(userData)
     return {
-        type: "user/setUserId",
-        userId
+        type: "user/setUserData",
+        userData
     }
 }
 

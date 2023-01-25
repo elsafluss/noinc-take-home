@@ -22,7 +22,6 @@ export const Login = () => {
         email === userLoginData.email &&
         password === userLoginData.password
       ) {
-        // console.log(userLoginData.userId)
         getData(userLoginData.userId)
       }
     })

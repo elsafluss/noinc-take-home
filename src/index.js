@@ -4,14 +4,12 @@ import "./index.css"
 import { App } from "./App"
 import * as serviceWorker from "./serviceWorker"
 import { BrowserRouter } from "react-router-dom"
-import reducer from "./reducers"
-import { createStore, applyMiddleware, compose } from "redux"
 import { Provider } from "react-redux"
-import thunk from "redux-thunk"
+import { configureStore } from "@reduxjs/toolkit"
+import user from "./reducers/user"
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-
-const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+// const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+const store = configureStore({ reducer: user })
 
 ReactDOM.render(
   <Provider store={store}>

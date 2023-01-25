@@ -1,19 +1,11 @@
 const initialUserState = {
-  userName: "",
-  password: "",
-  email: "",
-  interests: [],
-  skills: [],
+  userData: {},
 }
 
 const user = (state = initialUserState, action) => {
   switch (action.type) {
-    // case setUser:
-    //   return { ...state, userName: action.payload }
-    // case showInterests:
-    //   return { ...state, interests: action.payload }
-    // case showSkills:
-    //   return { ...state, skills: action.payload }
+    case "user/setUserData":
+      return { ...state, userData: action.payload }
     default:
       return state
   }

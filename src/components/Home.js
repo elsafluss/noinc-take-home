@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { connect } from "react-redux"
+// import { connect } from "react-redux"
 // import { showInterests } from "../actions"
 import "./Home.css"
 import { Nav } from "./Nav.js"
