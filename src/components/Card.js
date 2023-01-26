@@ -4,13 +4,14 @@ import "./Card.css"
 
 export const Card = ({ interests, skills }) => {
   if (!interests && !skills) {
-    return <h1> you are not interesting or skilled, please get a hobby </h1>
+    return <h1> You are not interesting or skilled, please get a hobby </h1>
   } else if (interests) {
     const interestCard = interests.map((interest, i) => {
       return (
         <Link
+          className="link"
           to={{
-            pathname: `/interest/${interest.name}`,
+            pathname: `/interest/${interest.name.toLowerCase()}`,
           }}
         >
           <div className="card-container" key={i}>
@@ -21,7 +22,9 @@ export const Card = ({ interests, skills }) => {
               <div className="card-name-key">NAME:</div>
               <div className="card-name-value">{interest.name}</div>
               <div className="card-type-key">TYPE:</div>
-              <div className="card-type-value">{interest.type}</div>
+              <div className={`card-type-value ${interest.type.toLowerCase()}`}>
+                {interest.type}
+              </div>
             </div>
           </div>
         </Link>
@@ -32,8 +35,9 @@ export const Card = ({ interests, skills }) => {
     const skillsCard = skills.map((skill, i) => {
       return (
         <Link
+          className="link"
           to={{
-            pathname: `/skill/${skill.name}`,
+            pathname: `/skill/${skill.name.toLowerCase()}`,
           }}
         >
           <div className="card-container" key={i}>
@@ -44,7 +48,9 @@ export const Card = ({ interests, skills }) => {
               <div className="card-name-key">NAME:</div>
               <div className="card-name-value">{skill.name}</div>
               <div className="card-type-key">TYPE:</div>
-              <div className="card-type-value">{skill.type}</div>
+              <div className={`card-type-value ${skill.type.toLowerCase()}`}>
+                {skill.type}
+              </div>
             </div>
           </div>
         </Link>
