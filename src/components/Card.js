@@ -10,11 +10,14 @@ export const Card = ({ interests, skills }) => {
       return (
         <Link
           className="link"
+          key={i}
           to={{
             pathname: `/interest/${interest.name.toLowerCase()}`,
+            state: { id: interest.id }
+            // send through its id maybe?
           }}
         >
-          <div className="card-container" key={i}>
+          <div className="card-container">
             <div className="card-title">
               <p>Interest</p>
             </div>
@@ -36,11 +39,13 @@ export const Card = ({ interests, skills }) => {
       return (
         <Link
           className="link"
+          key={i}
           to={{
             pathname: `/skill/${skill.name.toLowerCase()}`,
+            state: { id: skill.id },
           }}
         >
-          <div className="card-container" key={i}>
+          <div className="card-container">
             <div className="card-title">
               <p>Skill</p>
             </div>
