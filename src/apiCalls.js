@@ -1,7 +1,6 @@
 import { loginInfo } from "./mockData/authentication"
 import { userData } from "./mockData/dummy-data"
 
-// TODO: get currentUser from store, return that user's data file
 export const getData = (userId) => {
   const url = `http://localhost:3000/`
   const options = {
@@ -33,7 +32,6 @@ export const getLogins = () => {
     if (!response.ok) {
       throw new Error(`${response.status}`)
     } else {
-      // console.log("elsa apicall userData", userData)
       return loginInfo
     }
   })

@@ -8,7 +8,8 @@ export const Home = ({ userData }) => {
   const username = userData.userData.userData.userName
   const interests = userData.userData.userData.interests
   const skills = userData.userData.userData.skills
-  if (username && interests && skills) {
+  const description = userData.userData.userData.description
+  if (username && interests && skills && description) {
     return (
       <>
         <Nav></Nav>
@@ -17,13 +18,7 @@ export const Home = ({ userData }) => {
             <p>Welcome, {username}</p>
           </div>
           <div className="home-header-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-            accumsan et viverra justo commodo. Proin sodales pulvinar sic
-            tempor. Sociis natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra
-            vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc
-            accuan eget.
+            {description}
           </div>
         </div>
         <div className="home-content">

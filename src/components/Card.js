@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./Card.css"
 
 export const Card = ({ interests, skills }) => {
@@ -7,34 +8,46 @@ export const Card = ({ interests, skills }) => {
   } else if (interests) {
     const interestCard = interests.map((interest, i) => {
       return (
-        <div className="card-container" key={i}>
-          <div className="card-title">
-            <p>Interest</p>
+        <Link
+          to={{
+            pathname: `/interest/${interest.name}`,
+          }}
+        >
+          <div className="card-container" key={i}>
+            <div className="card-title">
+              <p>Interest</p>
+            </div>
+            <div className="card-details">
+              <div className="card-name-key">NAME:</div>
+              <div className="card-name-value">{interest.name}</div>
+              <div className="card-type-key">TYPE:</div>
+              <div className="card-type-value">{interest.type}</div>
+            </div>
           </div>
-          <div className="card-details">
-            <div className="card-name-key">NAME:</div>
-            <div className="card-name-value">{interest.name}</div>
-            <div className="card-type-key">TYPE:</div>
-            <div className="card-type-value">{interest.type}</div>
-          </div>
-        </div>
+        </Link>
       )
     })
     return <div>{interestCard}</div>
   } else if (skills) {
     const skillsCard = skills.map((skill, i) => {
       return (
-        <div className="card-container" key={i}>
-          <div className="card-title">
-            <p>Skill</p>
+        <Link
+          to={{
+            pathname: `/skill/${skill.name}`,
+          }}
+        >
+          <div className="card-container" key={i}>
+            <div className="card-title">
+              <p>Skill</p>
+            </div>
+            <div className="card-details">
+              <div className="card-name-key">NAME:</div>
+              <div className="card-name-value">{skill.name}</div>
+              <div className="card-type-key">TYPE:</div>
+              <div className="card-type-value">{skill.type}</div>
+            </div>
           </div>
-          <div className="card-details">
-            <div className="card-name-key">NAME:</div>
-            <div className="card-name-value">{skill.name}</div>
-            <div className="card-type-key">TYPE:</div>
-            <div className="card-type-value">{skill.type}</div>
-          </div>
-        </div>
+        </Link>
       )
     })
     return <div>{skillsCard}</div>
