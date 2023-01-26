@@ -2,6 +2,7 @@ import React from "react"
 import "./Nav.css"
 import noincLogo from "../images/noinc-logo.svg"
 import userIcon from "../images/username-icon.svg"
+import { NavLink } from "react-router-dom"
 
 export const Nav = () => {
   return (
@@ -11,11 +12,34 @@ export const Nav = () => {
       </div>
       <div className="navbar-list-container">
         <span className="navbar-divider">|</span>
-        <p className="navbar-button">Home</p>
+        <NavLink
+          to={{
+            pathname: `/home`,
+          }}
+          className="navbar-button"
+        >
+          Home
+        </NavLink>
         <span className="navbar-divider">|</span>
-        <p className="navbar-button">Interests</p>
+        <NavLink
+          to={{
+            pathname: `/interests`,
+            state: { content: 'interests' },
+          }}
+          className="navbar-button"
+        >
+          Interests
+        </NavLink>
         <span className="navbar-divider">|</span>
-        <p className="navbar-button">Skills</p>
+        <NavLink
+          to={{
+            pathname: `/skills`,
+            state: { content: 'skills'}
+          }}
+          className="navbar-button"
+        >
+          Skills
+        </NavLink>
         <span className="navbar-divider">|</span>
         <p className="navbar-button username">
           <img
