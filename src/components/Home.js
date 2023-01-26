@@ -17,9 +17,7 @@ export const Home = ({ userData }) => {
           <div className="home-header-title">
             <p>Welcome, {username}</p>
           </div>
-          <div className="home-header-text">
-            {description}
-          </div>
+          <div className="home-header-text">{description}</div>
         </div>
         <div className="home-content">
           <Card interests={interests}></Card>
