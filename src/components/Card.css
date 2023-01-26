@@ -4,10 +4,11 @@
 .card-container {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   color: black;
   margin: 100px 20px;
+  padding-left: 20px;
   width: 355px;
   height: 220px;
   background-color: rgba(244, 249, 253, 1);
@@ -20,7 +21,6 @@
 }
 .card-title {
   width: 100%;
-  margin-left: 50px;
   text-align: left;
   color: #ec8643;
   text-decoration: none;
