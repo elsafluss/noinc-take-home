@@ -29,7 +29,6 @@
   width: 100%;
   text-align: left;
   color: var(--orange);
-  text-decoration: none;
 }
 .card-details {
   display: grid;
@@ -51,30 +50,54 @@
 .sport {
   background-color: var(--green);
   width: fit-content;
-  padding: 0 5px;
+  padding: 2px 5px;
 }
 .game {
   background-color: var(--purple);
   width: fit-content;
-  padding: 0 5px;
+  padding: 2px 5px;
 }
 .essential {
   background-color: var(--pink);
   width: fit-content;
-  padding: 0 5px;
+  padding: 2px 5px;
 }
 .practical {
   background-color: var(--teal);
   width: fit-content;
-  padding: 0 5px;
+  padding: 2px 5px;
   color: var(--black);
 }
 .professional {
   background-color: var(--blue);
   width: fit-content;
-  padding: 0 5px;
+  padding: 2px 5px;
 }
 .card-name-value,
 .card-type-value {
   font-weight: 400;
+}
+
+@media only screen and (max-width: 576px) {
+  .card-container {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    padding-left: 10px;
+    border: 5px solid var(--white);
+    box-shadow: 0px 0px 8px var(--box-shadow);
+  }
+  .card-container:hover {
+    border: 5px solid var(--orange);
+  }
+  .card-name-key,
+  .card-type-key {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  .card-details {
+    grid-template: 30px / auto auto;
+  }
+}
+@media only screen and (max-width: 992px) {
 }

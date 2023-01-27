@@ -18,28 +18,28 @@
 .sport {
   background-color: var(--green);
   width: fit-content;
-  padding: 0 5px;
+  padding: 2px 5px;
 }
 .game {
   background-color: var(--purple);
   width: fit-content;
-  padding: 0 5px;
+  padding: 2px 5px;
 }
 .essential {
   background-color: var(--pink);
   width: fit-content;
-  padding: 0 5px;
+  padding: 2px 5px;
 }
 .practical {
   background-color: var(--teal);
   width: fit-content;
-  padding: 0 5px;
+  padding: 2px 5px;
   color: var(--black);
 }
 .professional {
   background-color: var(--blue);
   width: fit-content;
-  padding: 0 5px;
+  padding: 2px 5px;
 }
 .details-detail {
   font-weight: 400;
