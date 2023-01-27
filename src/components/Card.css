@@ -19,6 +19,12 @@
 .card-container:hover {
   border: 10px solid #ec8643;
 }
+/* interest or skill is not current */
+.false {
+  color: #fff;
+  background-color: #333;
+  opacity: .5;
+}
 .card-title {
   width: 100%;
   text-align: left;

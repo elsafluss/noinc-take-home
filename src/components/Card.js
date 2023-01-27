@@ -17,7 +17,7 @@ export const Card = ({ interests, skills }) => {
             // send through its id maybe?
           }}
         >
-          <div className="card-container">
+          <div className={`card-container ${interest.current}`}>
             <div className="card-title">
               <p>Interest</p>
             </div>

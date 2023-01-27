@@ -6,17 +6,18 @@ import { Nav } from "./Nav"
 export const Details = ({ details }) => {
   const { state } = useLocation()
   const detailId = state.id - 1
+  const pageInfo = details[detailId]
 
   if (state && details) {
     return (
       <>
         <Nav></Nav>
         <div className="details-container">
-          <p className="details-title">{details[detailId].name}</p>
-          <p className={`details-type ${details[detailId].type.toLowerCase()}`}>
-            {details[detailId].type}
+          <p className="details-title">{pageInfo.name}</p>
+          <p className={`details-type ${pageInfo.type.toLowerCase()}`}>
+            {pageInfo.type}
           </p>
-          <p className="details-detail">{details[detailId].detail}</p>
+          <p className="details-detail">{pageInfo.detail}</p>
         </div>
       </>
     )
