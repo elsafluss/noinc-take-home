@@ -1,5 +1,5 @@
 .details-container {
-  color: #333;
+  color: var(--dark-gray);
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -11,33 +11,33 @@
   font-weight: 400;
 }
 .details-type {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
   font-size: 14px;
 }
 .sport {
-  background-color: rgba(25, 136, 100, 1);
+  background-color: var(--green);
   width: fit-content;
   padding: 0 5px;
 }
 .game {
-  background-color: rgba(86, 25, 136, 1);
+  background-color: var(--purple);
   width: fit-content;
   padding: 0 5px;
 }
 .essential {
-  background-color: rgba(200, 37, 154, 1);
+  background-color: var(--pink);
   width: fit-content;
   padding: 0 5px;
 }
 .practical {
-  background-color: rgba(52, 228, 234, 1);
+  background-color: var(--teal);
   width: fit-content;
   padding: 0 5px;
-  color: #000;
+  color: var(--black);
 }
 .professional {
-  background-color: rgba(45, 130, 183, 1);
+  background-color: var(--blue);
   width: fit-content;
   padding: 0 5px;
 }
@@ -45,5 +45,5 @@
   font-weight: 400;
   font-style: normal;
   font-size: 13px;
-  color: #000;
+  color: var(--black);
 }

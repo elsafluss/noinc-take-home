@@ -6,29 +6,29 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  color: black;
+  color: var(--black);
   margin: 100px 20px;
   padding-left: 20px;
   width: 355px;
   height: 220px;
-  background-color: rgba(244, 249, 253, 1);
-  border: 10px solid #fff;
+  background-color: var(--lightest-text);
+  border: 10px solid var(--white);
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px rgb(0 0 0 / 35%);
+  box-shadow: 0px 0px 10px var(--box-shadow);
 }
 .card-container:hover {
-  border: 10px solid #ec8643;
+  border: 10px solid var(--orange);
 }
 /* interest or skill is not current */
 .false {
-  color: #fff;
-  background-color: #333;
+  color: var(--white);
+  background-color: var(--dark-gray);
   opacity: 0.5;
 }
 .card-title {
   width: 100%;
   text-align: left;
-  color: #ec8643;
+  color: var(--orange);
   text-decoration: none;
 }
 .card-details {
@@ -45,32 +45,32 @@
   margin-bottom: 15px;
 }
 .card-type-value {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
 }
 .sport {
-  background-color: rgba(25, 136, 100, 1);
+  background-color: var(--green);
   width: fit-content;
   padding: 0 5px;
 }
 .game {
-  background-color: rgba(86, 25, 136, 1);
+  background-color: var(--purple);
   width: fit-content;
   padding: 0 5px;
 }
 .essential {
-  background-color: rgba(200, 37, 154, 1);
+  background-color: var(--pink);
   width: fit-content;
   padding: 0 5px;
 }
 .practical {
-  background-color: rgba(52, 228, 234, 1);
+  background-color: var(--teal);
   width: fit-content;
   padding: 0 5px;
-  color: #000;
+  color: var(--black);
 }
 .professional {
-  background-color: rgba(45, 130, 183, 1);
+  background-color: var(--blue);
   width: fit-content;
   padding: 0 5px;
 }

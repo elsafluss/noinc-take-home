@@ -6,15 +6,15 @@
   align-items: center;
   width: 100%;
   height: 75px;
-  background-color: rgba(66, 80, 91, 1);
-  color: #d7d7d7;
+  background-color: var(--darkest-background);
+  color: var(--lightest-text);
   font-weight: bold;
   font-size: 0.75em;
   font-style: normal;
   vertical-align: middle;
 }
 .navbar-logo-container {
-  background-color: rgba(93, 111, 125, 1);
+  background-color: var(--midtone-background);
   width: 200px;
   height: 100%;
   display: flex;
@@ -37,11 +37,11 @@
   margin: 0px 50px;
 }
 .navbar-button:hover {
-  color: #ec8643;
+  color: var(--orange);
 }
 .username {
   font-weight: bolder;
-  color: #fff;
+  color: var(--white);
 }
 .navbar-divider {
   align-self: flex-start;
@@ -58,5 +58,5 @@
 .active {
   box-sizing: content-box;
   padding-bottom: 3px;
-  border-bottom: 4px solid #ec8643;
+  border-bottom: 4px solid var(--orange);
 }

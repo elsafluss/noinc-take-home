@@ -1,10 +1,25 @@
+:root {
+  --dark-gray: #333;
+  --box-shadow: rgb(0 0 0 / 35%);
+  --lightest-text: #d7d7d7;
+  --darkest-background: rgba(66, 80, 91, 1);
+  --midtone-background: rgba(93, 111, 125, 1);
+  --pink: rgba(200, 37, 154, 1);
+  --orange: #ec8643;
+  --teal: rgba(52, 228, 234, 1);
+  --purple: rgba(86, 25, 136, 1);
+  --green: rgba(25, 136, 100, 1);
+  --blue: rgba(45, 130, 183, 1);
+  --black: #000;
+  --white: #fff;
+}
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
-  color: #fff;
+  color: var(--white);
   font-family: "Open Sans";
   font-weight: 700;
   font-style: normal;
