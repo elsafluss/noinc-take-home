@@ -33,13 +33,19 @@
   flex-direction: column;
 }
 .navbar-button {
+  align-self: flex-start;
   margin: 0px 50px;
+}
+.navbar-button:hover {
+  color: #ec8643;
 }
 .username {
   font-weight: bolder;
   color: #fff;
 }
 .navbar-divider {
+  align-self: flex-start;
+
   font-size: 1.5em;
   font-weight: 400;
   line-height: 14px;
@@ -48,4 +54,9 @@
   width: 20px;
   vertical-align: top;
   margin-right: 3px;
+}
+.active {
+  box-sizing: content-box;
+  padding-bottom: 3px;
+  border-bottom: 4px solid #ec8643;
 }

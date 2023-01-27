@@ -3,8 +3,10 @@ import "./Nav.css"
 import noincLogo from "../images/noinc-logo.svg"
 import userIcon from "../images/username-icon.svg"
 import { NavLink } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 export const Nav = () => {
+  const username = useSelector((state) => state.userData.userName)
   return (
     <header className="navbar-container">
       <div className="navbar-logo-container">
@@ -17,6 +19,8 @@ export const Nav = () => {
             pathname: `/home`,
           }}
           className="navbar-button"
+          // style={({ isActive }) => console.log("home button")}
+          // (isActive ? activeStyle : undefined)}
         >
           Home
         </NavLink>
@@ -24,9 +28,10 @@ export const Nav = () => {
         <NavLink
           to={{
             pathname: `/interests`,
-            state: { content: 'interests' },
+            state: { content: "interests" },
           }}
           className="navbar-button"
+          // style={({ isActive }) => console.log("interests button")}
         >
           Interests
         </NavLink>
@@ -34,7 +39,7 @@ export const Nav = () => {
         <NavLink
           to={{
             pathname: `/skills`,
-            state: { content: 'skills'}
+            state: { content: "skills" },
           }}
           className="navbar-button"
         >
@@ -47,7 +52,7 @@ export const Nav = () => {
             alt="user icon"
             className="navbar-user-icon"
           ></img>
-          Username
+          {username}
         </p>
       </div>
     </header>
