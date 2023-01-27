@@ -1,5 +1,4 @@
 import React from "react"
-// import { connect } from "react-redux"
 import { Route } from "react-router-dom/cjs/react-router-dom.min"
 import { Switch } from "react-router-dom"
 import "./App.css"
@@ -30,7 +29,7 @@ export const App = () => {
           render={() => <Details details={userSkills} />}
         />
         <Route path="/skills" render={() => <Catalog userData={userData} />} />
-        <Route path="/interests" render={() => <Catalog userData={userData} />} />
+        <Route path="/interests" render={() => <Catalog />} />
         <Route path="/*" component={Nav} />
       </Switch>
     </div>

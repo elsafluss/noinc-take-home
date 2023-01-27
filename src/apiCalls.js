@@ -51,7 +51,6 @@ export const getInfo = (type, userId) => {
       throw new Error(`${response.status}`)
     } else {
       const userInfo = userData.find((user) => userId === user.userId)
-      // don't return here - put it into redux
       return userInfo[type]
     }
   })

@@ -13,7 +13,7 @@ export const Card = ({ interests, skills }) => {
           key={i}
           to={{
             pathname: `/interest/${interest.name.toLowerCase()}`,
-            state: { id: interest.id }
+            state: { id: interest.id },
             // send through its id maybe?
           }}
         >

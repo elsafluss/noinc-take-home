@@ -7,16 +7,10 @@ import { loginInfo } from "../mockData/authentication"
 import { setUserData } from "../actions"
 import { useDispatch } from "react-redux"
 
-// TODO: CHANGE THE LOGIN FORM TO A STANDALONE COMPONENT
 export const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
-  // const [logins, setLogins] = useState("")
-
-  // when the page mounts, get the list of username/passwords
-  // eventually use this, for now just import the un/pw list from authentication.js
-  // useEffect(() => setLogins(getLogins()), [])
 
   // Could become slow once there are many users, but it's fake auth anyway
   const authUser = () => {

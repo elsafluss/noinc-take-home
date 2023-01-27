@@ -6,7 +6,7 @@ import { Card } from "./Card"
 import "./Catalog.css"
 import { Nav } from "./Nav"
 
-export const Catalog = ({ details }) => {
+export const Catalog = () => {
   const { state } = useLocation()
   const pageType = `${state.content
     .charAt(0)
@@ -32,5 +32,7 @@ export const Catalog = ({ details }) => {
         <Card skills={catalogData}></Card>
       </div>
     )
-  } else { return null }
+  } else {
+    return null
+  }
 }
