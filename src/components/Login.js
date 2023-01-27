@@ -12,8 +12,10 @@ export const Login = () => {
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
 
-  // Could become slow once there are many users, but it's fake auth anyway
   const authUser = () => {
+    if (!email.includes("@") || password.length < 3) return
+
+    // Could become slow once there are many users, but it's fake auth anyway
     loginInfo.find((userLoginData) => {
       if (
         email === userLoginData.email &&
