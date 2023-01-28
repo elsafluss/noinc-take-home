@@ -5,7 +5,6 @@ import "./Card.css"
 // TODO: this is displaying the cards on top of each other
 
 export const Card = ({cardData, type}) => {
-  console.log(cardData)
   if (!cardData) {
     return <h1> You are not interesting or skilled, please get a hobby. </h1>
   } else {
@@ -15,8 +14,8 @@ export const Card = ({cardData, type}) => {
           className="link"
           key={i}
           to={{
-            pathname: `/${type.toLowerCase()}/${item.name.toLowerCase()}`,
-            state: { id: item.id },
+            pathname: `/${type.toLowerCase()}/?item=${item.name.toLowerCase()}`,
+            state: item.id,
           }}
         >
           <div className={`card-container ${item.current}`}>

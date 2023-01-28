@@ -7,12 +7,12 @@ import "./Details.css"
 // details is the current user's interests/skills
 
 export const Details = ({ details }) => {
-  const { state } = useLocation()
-  console.log(details)
-  const detailId = state.id - 1
-  const pageInfo = details[detailId]
-
-  if (state && details) {
+  const location = useLocation()
+  const itemName = location.search.split("=")[1]
+  const pageInfo = details.find((item) => item.name.toLowerCase() === itemName)
+  
+  if (pageInfo) {
+    const current = pageInfo.current === true ? <p>Active</p> : <p>Inactive</p>
     return (
       <>
         <Nav></Nav>
@@ -22,7 +22,7 @@ export const Details = ({ details }) => {
             {pageInfo.type}
           </p>
           <p className="details-detail">{pageInfo.detail}</p>
-          <p className="details-current">{pageInfo.current}</p>
+          <p className="details-current">{current}</p>
         </div>
       </>
     )
