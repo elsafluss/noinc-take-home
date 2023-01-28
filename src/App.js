@@ -17,11 +17,8 @@ export const App = () => {
   const userInterests = userData.user.userData.interests
   const userSkills = userData.user.userData.skills
 
-  // Just wanted to make logging in a little easier :)
-  console.log(
-    "l33t haxxors only - do not include the quotation marks",
-    loginInfo
-  )
+  // Just wanted to make logging in a little easier (but also not secure)
+  console.log("Look here if you're a l33t haxxor only:", loginInfo)
 
   return (
     <div className="App">

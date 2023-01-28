@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 import "./Cards.css"
 
-export const Card = ({cardData, type}) => {
+export const Card = ({ cardData, type }) => {
   if (!cardData) {
     return <h1> You are not interesting or skilled, please get a hobby. </h1>
   } else {
