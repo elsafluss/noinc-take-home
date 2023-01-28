@@ -27,11 +27,11 @@ export const getLogins = () => {
       Accept: "application/json",
     },
   }
-
   return fetch(url, options).then((response) => {
     if (!response.ok) {
       throw new Error(`${response.status}`)
     } else {
+      console.log(loginInfo)
       return loginInfo
     }
   })

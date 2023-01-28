@@ -1,7 +1,9 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 import { useSelector } from "react-redux"
+
 import "./Nav.css"
+
 import noincLogo from "../../images/noinc-logo.svg"
 import userIcon from "../../images/username-icon.svg"
 

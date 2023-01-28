@@ -60,7 +60,7 @@
   border-bottom: 4px solid var(--orange);
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 720px) {
   .navbar-container {
     flex-direction: column;
     display: flex;

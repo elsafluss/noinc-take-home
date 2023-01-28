@@ -2,8 +2,10 @@ import React from "react"
 import { useSelector } from "react-redux"
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min"
 import { setUserData } from "../../Utils/Redux/actions"
+
 import { Card } from "../Card/Card"
 import { Nav } from "../Nav/Nav"
+
 import "./Catalog.css"
 
 export const Catalog = () => {
