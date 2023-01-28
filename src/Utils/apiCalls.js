@@ -31,7 +31,6 @@ export const getLogins = () => {
     if (!response.ok) {
       throw new Error(`${response.status}`)
     } else {
-      console.log(loginInfo)
       return loginInfo
     }
   })

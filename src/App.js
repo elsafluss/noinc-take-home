@@ -20,7 +20,7 @@ export const App = () => {
   const userSkills = userData.user.userData.skills
 
   // Just wanted to make logging in a little easier :)
-  console.log('l33t haxxors only',loginInfo)
+  console.log('l33t haxxors only - do not include the quotation marks',loginInfo)
 
   return (
     <div className="App">
