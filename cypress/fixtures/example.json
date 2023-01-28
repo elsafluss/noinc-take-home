@@ -1,0 +1,51 @@
+{
+  "userId": 3,
+  "userName": "test person",
+  "description": "The way I see it, every life is a pile of good things and bad things. Sorry, checking all the water in this area; there's an escaped fish.",
+  "interests": [
+    {
+      "id": 1,
+      "name": "Soccer",
+      "type": "Sport",
+      "current": true,
+      "detail": "Soccer is a Sport and Sports are cool"
+    },
+    {
+      "id": 2,
+      "name": "Football",
+      "type": "Sport",
+      "current": true,
+      "detail": "Football is a Sport and Sports are physical"
+    },
+    {
+      "id": 3,
+      "name": "Chess",
+      "type": "Game",
+      "current": false,
+      "detail": "Chess is a game and games are fun"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "Reading",
+      "type": "Essential",
+      "DateLearned": "March 1 2001",
+      "detail": "Reading is essential and fun"
+    },
+    {
+      "id": 2,
+      "name": "Writing",
+      "type": "Essential",
+      "DateLearned": "May 23 1999",
+      "detail": "Writing is essential and fun"
+    },
+    {
+      "id": 3,
+      "name": "Riding A Bike",
+      "type": "Practical",
+      "DateLearned": "September 12 1776",
+      "detail": "Riding A Bike is not essential"
+    }
+  ]
+}
