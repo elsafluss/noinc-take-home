@@ -1,20 +1,19 @@
 import React from "react"
 import { Route } from "react-router-dom/cjs/react-router-dom.min"
 import { Switch } from "react-router-dom"
-import "./App.css"
-import { Login } from "./components/Login"
+import { setUserData } from "./Utils/Redux/actions"
 import { useSelector } from "react-redux"
-import { setUserData } from "./actions"
-import { Nav } from "./components/Nav"
-import { Home } from "./components/Home"
-import { Details } from "./components/Details"
-import { Catalog } from "./components/Catalog"
+import { Login } from "./components/Login/Login"
+import { Nav } from "./components/Nav/Nav"
+import { Home } from "./components/Home/Home"
+import { Details } from "./components/Details/Details"
+import { Catalog } from "./components/Catalog/Catalog"
+import "./App.css"
 
 export const App = () => {
-  const userData = useSelector(setUserData)
-  const userInterests = userData.userData.userData.interests
-  const userSkills = userData.userData.userData.skills
-
+  const { userData } = useSelector(setUserData)
+  const userInterests = userData.user.userData.interests
+  const userSkills = userData.user.userData.skills
   return (
     <div className="App">
       <Switch>

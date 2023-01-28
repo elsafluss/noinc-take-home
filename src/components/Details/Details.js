@@ -1,7 +1,7 @@
 import React from "react"
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min"
 import "./Details.css"
-import { Nav } from "./Nav"
+import { Nav } from "../Nav/Nav"
 
 export const Details = ({ details }) => {
   const { state } = useLocation()

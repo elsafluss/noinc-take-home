@@ -1,10 +1,10 @@
 import React from "react"
 import { useSelector } from "react-redux"
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min"
-import { setUserData } from "../actions"
-import { Card } from "./Card"
+import { setUserData } from "../../Utils/Redux/actions"
+import { Card } from "../Card/Card"
+import { Nav } from "../Nav/Nav"
 import "./Catalog.css"
-import { Nav } from "./Nav"
 
 export const Catalog = () => {
   const { state } = useLocation()

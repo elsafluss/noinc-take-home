@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./Home.css"
-import { Nav } from "./Nav.js"
-import { Card } from "./Card"
+import { Nav } from "../Nav/Nav.js"
+import { Card } from "../Card/Card"
 
 export const Home = ({ userData }) => {
   const username = userData.userData.userData.userName

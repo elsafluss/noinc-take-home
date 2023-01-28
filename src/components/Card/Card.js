@@ -14,7 +14,6 @@ export const Card = ({ interests, skills }) => {
           to={{
             pathname: `/interest/${interest.name.toLowerCase()}`,
             state: { id: interest.id },
-            // send through its id maybe?
           }}
         >
           <div className={`card-container ${interest.current}`}>

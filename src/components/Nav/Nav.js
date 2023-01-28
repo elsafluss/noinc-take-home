@@ -1,9 +1,9 @@
 import React from "react"
-import "./Nav.css"
-import noincLogo from "../images/noinc-logo.svg"
-import userIcon from "../images/username-icon.svg"
 import { NavLink } from "react-router-dom"
 import { useSelector } from "react-redux"
+import "./Nav.css"
+import noincLogo from "../../images/noinc-logo.svg"
+import userIcon from "../../images/username-icon.svg"
 
 export const Nav = () => {
   const username = useSelector((state) => state.userData.userName)
@@ -19,8 +19,6 @@ export const Nav = () => {
             pathname: `/home`,
           }}
           className="navbar-button"
-          // style={({ isActive }) => console.log("home button")}
-          // (isActive ? activeStyle : undefined)}
         >
           Home
         </NavLink>
@@ -31,7 +29,6 @@ export const Nav = () => {
             state: { content: "interests" },
           }}
           className="navbar-button"
-          // style={({ isActive }) => console.log("interests button")}
         >
           Interests
         </NavLink>

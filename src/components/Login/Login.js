@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import "./Login.css"
-import noincLogo from "../images/noinc-logo.svg"
-import { getData } from "../apiCalls"
-import { loginInfo } from "../mockData/authentication"
-import { setUserData } from "../actions"
+import noincLogo from "../../images/noinc-logo.svg"
+import { getData } from "../../Utils/apiCalls"
+import { loginInfo } from "../../Utils/mockData/authentication"
+import { setUserData } from "../../Utils/Redux/actions"
 import { useDispatch } from "react-redux"
 
 export const Login = () => {

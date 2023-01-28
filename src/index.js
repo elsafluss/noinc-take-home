@@ -6,7 +6,7 @@ import * as serviceWorker from "./serviceWorker"
 import { BrowserRouter } from "react-router-dom"
 import { Provider } from "react-redux"
 import { configureStore } from "@reduxjs/toolkit"
-import user from "./reducers/user"
+import user from '../src/Utils/Redux/reducers'
 
 const store = configureStore({ reducer: user })
 
