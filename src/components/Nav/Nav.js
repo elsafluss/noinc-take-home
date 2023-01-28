@@ -9,6 +9,7 @@ import userIcon from "../../images/username-icon.svg"
 
 export const Nav = () => {
   const username = useSelector((state) => state.user.userData.userName)
+
   return (
     <header className="navbar-container">
       <div className="navbar-logo-container">

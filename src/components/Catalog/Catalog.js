@@ -2,38 +2,37 @@ import React from "react"
 import { useSelector } from "react-redux"
 import { useLocation } from "react-router-dom"
 
-import { setUserData } from "../../Utils/Redux/actions"
-
-import { Card } from "../Card/Card"
+import { Card } from "../Card/Cards"
 import { Nav } from "../Nav/Nav"
 
 import "./Catalog.css"
 
-export const Catalog = () => {
-  const { state } = useLocation()
-  const pageType = `${state.content
-    .charAt(0)
-    .toUpperCase()}${state.content.slice(1)}`
-  const { userData } = useSelector(setUserData)
-  const catalogData = userData.user[state.content]
+export const Catalog = (content) => {
+  const userData = useSelector((state) => state.user.userData)
+  const pageType = useLocation()
+  const cleanPageType = pageType.pathname.toUpperCase().replace("/", "")
 
-  if (!catalogData) {
+  if (!userData) {
     return <h1>There's nothing to see here</h1>
-  } else if (pageType === "Interests") {
+  } else if (pageType.pathname === "/interests") {
     return (
-      <div className="details-container">
-        <p className="details-title">{pageType}</p>
+      <>
         <Nav></Nav>
-        <Card interests={catalogData}></Card>
-      </div>
+        <p className="catalog-title">{cleanPageType}</p>
+        <div className="catalog-container">
+          <Card cardData={userData.interests} type={"Interest"}></Card>
+        </div>
+      </>
     )
-  } else if (pageType === "Skills") {
+  } else if (pageType.pathname === "/skills") {
     return (
-      <div className="details-container">
-        <p className="details-title">{pageType}</p>
+      <>
         <Nav></Nav>
-        <Card skills={catalogData}></Card>
-      </div>
+        <p className="catalog-title">{cleanPageType}</p>
+        <div className="catalog-container">
+          <Card cardData={userData.skills} type={"Skill"}></Card>
+        </div>
+      </>
     )
   } else {
     return null

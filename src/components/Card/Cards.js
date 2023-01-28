@@ -1,8 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-import "./Card.css"
-// TODO: this is displaying the cards on top of each other
+import "./Cards.css"
 
 export const Card = ({cardData, type}) => {
   if (!cardData) {
