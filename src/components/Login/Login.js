@@ -14,20 +14,22 @@ export const Login = () => {
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  let validated = false
 
   async function authUser(event) {
     event.preventDefault()
-    // The most basic of form validation
-    // TODO: add error message instead of just returning here
     if (!email.includes("@") || password.length < 3) {
-      // alert "you suck"
-      return
+      window.alert(
+        "Alerts are pretty terrible.\nThis should be a modal or just text on the page.\nFor now, though I'll just tell you that the username must include '@', and password must be longer than three characters. This is very secure."
+      )
+    } else {
+      validated = true
     }
 
     const loginInfo = await getLogins()
 
     // Could become slow once there are many users, but it's fake auth anyway
-    if (loginInfo) {
+    if (loginInfo && validated) {
       const userInfo = loginInfo.find((userLoginData) => {
         if (
           email === userLoginData.email &&
@@ -37,6 +39,11 @@ export const Login = () => {
         }
         return false
       })
+      if (!userInfo) {
+        window.alert(
+          "You've entered information that doesn't match our records.\nTo reset your password, wait until I've built that functionality."
+        )
+      }
       await getData(userInfo.userId).then((response) => {
         dispatch(setUserData(response))
       })
@@ -47,7 +54,7 @@ export const Login = () => {
   return (
     <header className="login-container">
       <div className="login-logo-container">
-        <img src={noincLogo} alt="noinc logo" className="login-logo"/>
+        <img src={noincLogo} alt="noinc logo" className="login-logo" />
       </div>
       <div className="login-form-container">
         <p className="login-text">Login to Our Magic Portal</p>

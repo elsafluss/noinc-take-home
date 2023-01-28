@@ -7,8 +7,9 @@ const ages = [
 ]
 
 const getUserAge = (userData) =>
-  ages.find((user) => {
-    if (userData.userId === ages.userId) return user.age
+  ages.find(() => {
+    const age = userData.userId === ages.userId
+    return age
   })
 
 export const userData = [
