@@ -4,15 +4,28 @@ import { useLocation } from "react-router-dom"
 import { Nav } from "../Nav/Nav"
 
 import "./Details.css"
-// details is the current user's interests/skills
 
 export const Details = ({ details }) => {
+  let currentInterest, duration
   const location = useLocation()
-  const itemName = location.search.split("=")[1]
-  const pageInfo = details.find((item) => item.name.toLowerCase() === itemName)
-  
+  const itemName = location.search.split("=").pop()
+  const cleanItemName = itemName.replaceAll("%20", " ")
+  const pageInfo = details.find(
+    (item) => item.name.toLowerCase() === cleanItemName
+  )
+
   if (pageInfo) {
-    const current = pageInfo.current === true ? <p>Active</p> : <p>Inactive</p>
+    if (location.pathname === "/interest/") {
+      currentInterest = pageInfo.current ? (
+        <div>This is an active interest.</div>
+      ) : (
+        <div>This is not an active interest.</div>
+      )
+    }
+    if (location.pathname === "/skill/") {
+      duration = <div>Learned on {pageInfo.DateLearned}</div>
+    }
+
     return (
       <>
         <Nav></Nav>
@@ -21,12 +34,11 @@ export const Details = ({ details }) => {
           <p className={`details-type ${pageInfo.type.toLowerCase()}`}>
             {pageInfo.type}
           </p>
-          <p className="details-detail">{pageInfo.detail}</p>
-          <p className="details-current">{current}</p>
+          <div className="details-detail">{pageInfo.detail}</div>
+          <div className="details-detail">{duration}</div>
+          <div className="details-detail">{currentInterest}</div>
         </div>
       </>
     )
-  } else {
-    return null
   }
 }

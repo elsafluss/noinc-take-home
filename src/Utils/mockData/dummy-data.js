@@ -63,7 +63,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(1), "years")
           .add(2, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Reading is essential and fun",
       },
       {
@@ -73,7 +73,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(1), "years")
           .add(2, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Writing is essential and fun",
       },
       {
@@ -83,7 +83,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(1), "years")
           .add(5, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Riding A Bike is not essential",
       },
       {
@@ -93,7 +93,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(1), "years")
           .add(16, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Driving A Car is essential in some countries",
       },
       {
@@ -103,7 +103,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(1), "years")
           .add(24, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Coding is profitable",
       },
     ],
@@ -158,7 +158,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(2), "years")
           .add(2, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Knitting is essential and fun",
       },
       {
@@ -168,7 +168,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(2), "years")
           .add(2, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Drinking is essential and fun",
       },
       {
@@ -178,7 +178,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(2), "years")
           .add(5, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Walking is helpful",
       },
       {
@@ -188,7 +188,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(2), "years")
           .add(16, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Napping is essential to well-being",
       },
       {
@@ -198,7 +198,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(2), "years")
           .add(24, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Coding is lyfe",
       },
     ],
@@ -253,7 +253,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(1), "years")
           .add(2, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Reading is essential and fun",
       },
       {
@@ -263,7 +263,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(1), "years")
           .add(2, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Writing is essential and fun",
       },
       {
@@ -273,7 +273,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(1), "years")
           .add(5, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Riding A Bike is not essential",
       },
       {
@@ -283,7 +283,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(1), "years")
           .add(16, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Driving A Car is essential in some countries",
       },
       {
@@ -293,7 +293,7 @@ export const userData = [
         DateLearned: moment()
           .subtract(getUserAge(1), "years")
           .add(24, "years")
-          .format(),
+          .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Coding is profitable",
       },
     ],
