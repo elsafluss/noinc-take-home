@@ -5,7 +5,7 @@ import "./Card.css"
 
 export const Card = ({ interests, skills }) => {
   if (!interests && !skills) {
-    return <h1> You are not interesting or skilled, please get a hobby </h1>
+    return <h1> You are not interesting or skilled, please get a hobby. </h1>
   } else if (interests) {
     const interestCard = interests.map((interest, i) => {
       return (

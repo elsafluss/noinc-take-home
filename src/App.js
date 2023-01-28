@@ -20,7 +20,10 @@ export const App = () => {
   const userSkills = userData.user.userData.skills
 
   // Just wanted to make logging in a little easier :)
-  console.log('l33t haxxors only - do not include the quotation marks',loginInfo)
+  console.log(
+    "l33t haxxors only - do not include the quotation marks",
+    loginInfo
+  )
 
   return (
     <div className="App">
@@ -35,8 +38,14 @@ export const App = () => {
           path="/skill/*"
           render={() => <Details details={userSkills} />}
         />
-        <Route path="/skills" render={() => <Catalog userData={userData} />} />
-        <Route path="/interests" render={() => <Catalog />} />
+        <Route
+          path="/interests"
+          render={() => <Catalog userData={userInterests} />}
+        />
+        <Route
+          path="/skills"
+          render={() => <Catalog userData={userSkills} />}
+        />
         <Route path="/*" component={Nav} />
       </Switch>
     </div>

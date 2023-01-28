@@ -13,26 +13,31 @@ export const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
+  let canLogIn = true
 
-  const authUser = async () => {
+  const authUser = async (e) => {
+    e.preventDefault()
     // The most basic of form validation
     // TODO: add error message instead of just returning here
-    if (!email.includes("@") || password.length < 3) return
+    if (!email.includes("@") || password.length < 3) {
+      canLogIn = false
+      return
+    }
 
     const loginInfo = await getLogins()
 
     // Could become slow once there are many users, but it's fake auth anyway
-    if (loginInfo) {
-      loginInfo.find((userLoginData) => {
+    if (loginInfo && canLogIn) {
+      return loginInfo.find((userLoginData) => {
         if (
           email === userLoginData.email &&
           password === userLoginData.password
         ) {
-          getData(userLoginData.userId).then((response) => {
+          return getData(userLoginData.userId).then((response) => {
             setUserData(response)
             dispatch(setUserData(response))
           })
-        }
+        } 
       })
     }
   }
@@ -60,7 +65,7 @@ export const Login = () => {
             value={password}
           ></input>
           <Link to="/home">
-            <button type="submit" className="login-button" onClick={authUser}>
+            <button type="submit" className="login-button" onClick={(e) => {authUser(e)}}>
               LOGIN
             </button>
           </Link>
