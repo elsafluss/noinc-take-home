@@ -1,6 +1,5 @@
 import React from "react"
-import { Route } from "react-router-dom/cjs/react-router-dom.min"
-import { Switch } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 
 import { setUserData } from "./Utils/Redux/actions"
 import { useSelector } from "react-redux"
@@ -27,27 +26,21 @@ export const App = () => {
 
   return (
     <div className="App">
-      <Switch>
-        <Route exact path="/" render={() => <Login />} />
-        <Route path="/home" render={() => <Home userData={userData} />} />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home userData={userData} />} />
         <Route
           path="/interest/*"
-          render={() => <Details details={userInterests} />}
+          element={<Details details={userInterests} />}
         />
-        <Route
-          path="/skill/*"
-          render={() => <Details details={userSkills} />}
-        />
+        <Route path="/skill/*" element={<Details details={userSkills} />} />
         <Route
           path="/interests"
-          render={() => <Catalog userData={userInterests} />}
+          element={<Catalog userData={userInterests} />}
         />
-        <Route
-          path="/skills"
-          render={() => <Catalog userData={userSkills} />}
-        />
-        <Route path="/*" component={Nav} />
-      </Switch>
+        <Route path="/skills" element={<Catalog userData={userSkills} />} />
+        <Route path="/*" element={<Nav />} />
+      </Routes>
     </div>
   )
 }

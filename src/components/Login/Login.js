@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { setUserData } from "../../Utils/Redux/actions"
 import { useDispatch } from "react-redux"
 
@@ -13,39 +13,41 @@ export const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const dispatch = useDispatch()
-  let canLogIn = true
+  const navigate = useNavigate()
 
-  const authUser = async (e) => {
-    e.preventDefault()
+  async function authUser(event) {
+    event.preventDefault()
     // The most basic of form validation
     // TODO: add error message instead of just returning here
     if (!email.includes("@") || password.length < 3) {
-      canLogIn = false
+      // alert "you suck"
       return
     }
 
     const loginInfo = await getLogins()
 
     // Could become slow once there are many users, but it's fake auth anyway
-    if (loginInfo && canLogIn) {
-      return loginInfo.find((userLoginData) => {
+    if (loginInfo) {
+      const userInfo = loginInfo.find((userLoginData) => {
         if (
           email === userLoginData.email &&
           password === userLoginData.password
         ) {
-          return getData(userLoginData.userId).then((response) => {
-            setUserData(response)
-            dispatch(setUserData(response))
-          })
-        } 
+          return true
+        }
+        return false
       })
+      await getData(userInfo.userId).then((response) => {
+        dispatch(setUserData(response))
+      })
+      navigate("/home")
     }
   }
 
   return (
     <header className="login-container">
       <div className="login-logo-container">
-        <img src={noincLogo} alt="noinc logo" className="login-logo"></img>
+        <img src={noincLogo} alt="noinc logo" className="login-logo"/>
       </div>
       <div className="login-form-container">
         <p className="login-text">Login to Our Magic Portal</p>
@@ -56,19 +58,17 @@ export const Login = () => {
             type="text"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
-          ></input>
+          />
           <input
             placeholder="Password"
             name="password"
             type="password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
-          ></input>
-          <Link to="/home">
-            <button type="submit" className="login-button" onClick={(e) => {authUser(e)}}>
-              LOGIN
-            </button>
-          </Link>
+          />
+          <button className="login-button" onClick={authUser}>
+            LOGIN
+          </button>
         </form>
       </div>
     </header>

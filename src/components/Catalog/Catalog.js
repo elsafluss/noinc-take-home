@@ -1,6 +1,7 @@
 import React from "react"
 import { useSelector } from "react-redux"
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min"
+import { useLocation } from "react-router-dom"
+
 import { setUserData } from "../../Utils/Redux/actions"
 
 import { Card } from "../Card/Card"
