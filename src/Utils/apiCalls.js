@@ -1,4 +1,4 @@
-import { loginInfo } from "./mockData/authentication"
+import { loginInfo } from "./authentication"
 import { userData } from "./mockData/dummy-data"
 
 export const getData = (userId) => {

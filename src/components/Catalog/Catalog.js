@@ -12,7 +12,7 @@ export const Catalog = () => {
     .charAt(0)
     .toUpperCase()}${state.content.slice(1)}`
   const { userData } = useSelector(setUserData)
-  const catalogData = userData.userData[state.content]
+  const catalogData = userData.user[state.content]
 
   if (!catalogData) {
     return <h1>There's nothing to see here</h1>

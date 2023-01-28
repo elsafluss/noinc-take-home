@@ -5,10 +5,10 @@ import { Nav } from "../Nav/Nav.js"
 import { Card } from "../Card/Card"
 
 export const Home = ({ userData }) => {
-  const username = userData.userData.userData.userName
-  const interests = userData.userData.userData.interests
-  const skills = userData.userData.userData.skills
-  const description = userData.userData.userData.description
+  const username = userData.user.userData.userName
+  const interests = userData.user.userData.interests
+  const skills = userData.user.userData.skills
+  const description = userData.user.userData.description
   if (username && interests && skills && description) {
     return (
       <>

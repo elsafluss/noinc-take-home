@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import "./Login.css"
 import noincLogo from "../../images/noinc-logo.svg"
 import { getData } from "../../Utils/apiCalls"
-import { loginInfo } from "../../Utils/mockData/authentication"
+import { loginInfo } from "../../Utils/authentication"
 import { setUserData } from "../../Utils/Redux/actions"
 import { useDispatch } from "react-redux"
 
