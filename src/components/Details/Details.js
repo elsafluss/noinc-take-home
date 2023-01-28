@@ -4,9 +4,11 @@ import { useLocation } from "react-router-dom"
 import { Nav } from "../Nav/Nav"
 
 import "./Details.css"
+// details is the current user's interests/skills
 
 export const Details = ({ details }) => {
   const { state } = useLocation()
+  console.log(details)
   const detailId = state.id - 1
   const pageInfo = details[detailId]
 
@@ -20,6 +22,7 @@ export const Details = ({ details }) => {
             {pageInfo.type}
           </p>
           <p className="details-detail">{pageInfo.detail}</p>
+          <p className="details-current">{pageInfo.current}</p>
         </div>
       </>
     )

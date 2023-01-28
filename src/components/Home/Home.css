@@ -18,8 +18,8 @@
   font-size: 13px;
 }
 .home-content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto auto;
   text-align: left;
   width: 90%;
   margin-top: 20px;

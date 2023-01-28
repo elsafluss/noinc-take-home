@@ -23,8 +23,8 @@ export const Home = ({ userData }) => {
           <div className="home-header-text">{description}</div>
         </div>
         <div className="home-content">
-          <Card interests={interests}></Card>
-          <Card skills={skills}></Card>
+          <Card cardData={interests} type={"Interest"}></Card>
+          <Card cardData={skills} type={"Skill"}></Card>
         </div>
       </>
     )

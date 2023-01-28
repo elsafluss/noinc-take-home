@@ -5,7 +5,6 @@ import { setUserData } from "./Utils/Redux/actions"
 import { useSelector } from "react-redux"
 
 import { Login } from "./components/Login/Login"
-import { Nav } from "./components/Nav/Nav"
 import { Home } from "./components/Home/Home"
 import { Details } from "./components/Details/Details"
 import { Catalog } from "./components/Catalog/Catalog"
@@ -39,7 +38,7 @@ export const App = () => {
           element={<Catalog userData={userInterests} />}
         />
         <Route path="/skills" element={<Catalog userData={userSkills} />} />
-        <Route path="/*" element={<Nav />} />
+        {/* <Route path="/*" element={<Nav />} /> */}
       </Routes>
     </div>
   )
