@@ -207,7 +207,7 @@ export const userData = [
     userId: 3,
     userName: "test person",
     description:
-      "The way I see it, every life is a pile of good things and bad things.…hey.…the good things don't always soften the bad things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant. It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister. You hate me; you want to kill me! Well, go on! Kill me! KILL ME! Stop talking, brain thinking. Hush. No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister. You've swallowed a planet! Saving the world with meals on wheels. I'm the Doctor, I'm worse than everyone's aunt. *catches himself* And that is not how I'm introducing myself. Sorry, checking all the water in this area; there's an escaped fish. Did I mention we have comfy chairs? The way I see it, every life is a pile of good things and bad things.…hey.…the good things don't always soften the bad things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant. Heh-haa! Super squeaky bum time! I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel like jumping out of a spaceship. Sorry, checking all the water in this area; there's an escaped fish.",
+      "The way I see it, every life is a pile of good things and bad things.",
     interests: [
       {
         id: 1,
@@ -229,20 +229,6 @@ export const userData = [
         type: "Game",
         current: false,
         detail: "Chess is a game and games are fun",
-      },
-      {
-        id: 4,
-        name: "Racing",
-        type: "Sport",
-        current: false,
-        detail: "Racing is a loud sport",
-      },
-      {
-        id: 5,
-        name: "Horseback Riding",
-        type: "Sport",
-        current: true,
-        detail: "Horseback Riding is an ancient sport",
       },
     ],
     skills: [
@@ -275,26 +261,6 @@ export const userData = [
           .add(5, "years")
           .format("MMMM Do YYYY, h:mm:ss a"),
         detail: "Riding A Bike is not essential",
-      },
-      {
-        id: 4,
-        name: "Driving A Car",
-        type: "Practical",
-        DateLearned: moment()
-          .subtract(getUserAge(1), "years")
-          .add(16, "years")
-          .format("MMMM Do YYYY, h:mm:ss a"),
-        detail: "Driving A Car is essential in some countries",
-      },
-      {
-        id: 5,
-        name: "Coding",
-        type: "Professional",
-        DateLearned: moment()
-          .subtract(getUserAge(1), "years")
-          .add(24, "years")
-          .format("MMMM Do YYYY, h:mm:ss a"),
-        detail: "Coding is profitable",
       },
     ],
   },

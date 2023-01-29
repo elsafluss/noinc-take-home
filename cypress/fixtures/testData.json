@@ -1,7 +1,9 @@
 {
   "userId": 3,
   "userName": "test person",
-  "description": "The way I see it, every life is a pile of good things and bad things. Sorry, checking all the water in this area; there's an escaped fish.",
+  "email": "test@test",
+  "password": "password",
+  "description": "The way I see it, every life is a pile of good things and bad things.",
   "interests": [
     {
       "id": 1,
